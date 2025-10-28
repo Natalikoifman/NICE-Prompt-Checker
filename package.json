@@ -1,0 +1,32 @@
+{
+  "name": "nice-prompt-checker",
+  "version": "1.0.0",
+  "description": "AI assistant for analyzing, validating, and generating survey prompts",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "teams",
+    "bot",
+    "prompt-checker",
+    "survey",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.12.0",
+    "botbuilder": "^4.20.0",
+    "canvas": "^3.2.0",
+    "dotenv": "^16.3.1",
+    "restify": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
