@@ -42,8 +42,9 @@ server.post('/api/messages', async (req, res) => {
 });
 
 // Health check endpoint
-server.get('/health', (req, res) => {
+server.get('/health', (req, res, next) => {
     res.send(200, { status: 'healthy', service: 'NICE Prompt Checker Bot' });
+    next();
 });
 
 // Start server
