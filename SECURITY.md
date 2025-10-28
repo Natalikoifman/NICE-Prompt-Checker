@@ -2,7 +2,13 @@
 
 ## Current Status
 
-This project has been scanned for security vulnerabilities.
+This project has been scanned for security vulnerabilities and updated to use secure dependency versions.
+
+### Dependency Security
+
+✅ **Axios updated to 1.12.0** - Addresses DoS and SSRF vulnerabilities
+✅ **Bot Framework SDK 4.20.0** - Latest stable version
+✅ **Dotenv 16.3.1** - No known vulnerabilities
 
 ### Known Issues
 
