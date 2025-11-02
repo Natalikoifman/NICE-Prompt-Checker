@@ -8,6 +8,7 @@ AI-powered Microsoft Teams bot for analyzing, validating, and generating survey 
 - **Bias Detection**: Identifies potentially biased or leading language
 - **Double-Barreled Detection**: Catches questions asking multiple things at once
 - **Length Assessment**: Flags questions that are too long or complex
+- **File Upload Support**: Upload and analyze Excel (.xlsx, .xls), Word (.docx, .doc), and PDF files
 - **Instant Feedback**: Get actionable suggestions in real-time
 
 ## Quick Start
@@ -49,12 +50,17 @@ AI-powered Microsoft Teams bot for analyzing, validating, and generating survey 
 
 ## How It Works
 
-Simply send your survey prompt to the bot, and it will analyze:
+Send your survey prompt to the bot as text or upload a file, and it will analyze:
 
-**Example Input:**
+**Example - Text Input:**
 ```
 Don't you agree that employees should always work overtime?
 ```
+
+**Example - File Upload:**
+- Upload Excel files (.xlsx, .xls) containing survey questions
+- Upload Word documents (.docx, .doc) with survey content
+- Upload PDF files (.pdf) with survey questions
 
 **Bot Response:**
 - Clarity Score: 7/10 ⚠️
@@ -75,6 +81,7 @@ The bot is built with:
 - **Node.js**: Runtime environment
 - **Restify**: HTTP server
 - **Adaptive Cards**: Rich, interactive responses in Teams
+- **File Parsing Libraries**: xlsx, mammoth, pdf-parse for document processing
 
 ### Project Structure
 
@@ -83,6 +90,7 @@ NICE-Prompt-Checker/
 ├── src/
 │   ├── index.js          # Bot server entry point
 │   ├── bot.js            # Bot logic and prompt analysis
+│   ├── fileParser.js     # File parsing for Excel, Word, PDF
 │   └── createIcons.js    # Icon generation utility
 ├── appPackage/
 │   ├── manifest.json     # Teams app manifest
@@ -155,6 +163,26 @@ Contributions are welcome! Please:
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
+
+## Using File Upload
+
+The bot can analyze survey questions from uploaded files:
+
+**Supported File Types:**
+- Excel files: `.xlsx`, `.xls`
+- Word documents: `.docx`, `.doc`
+- PDF files: `.pdf`
+
+**How to Upload:**
+1. In Teams, click the paperclip icon in the chat
+2. Select your file (Excel, Word, or PDF)
+3. Send the file to the bot
+4. The bot will extract text content and analyze it
+
+**What Gets Analyzed:**
+- Excel: All text from all sheets
+- Word: All document text content
+- PDF: All extracted text from the document
 
 ## Testing
 

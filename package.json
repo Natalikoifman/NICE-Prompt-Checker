@@ -21,7 +21,10 @@
     "botbuilder": "^4.20.0",
     "canvas": "^3.2.0",
     "dotenv": "^16.3.1",
-    "restify": "^11.1.0"
+    "mammoth": "^1.11.0",
+    "pdf-parse": "^2.4.5",
+    "restify": "^11.1.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
